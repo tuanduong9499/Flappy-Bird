@@ -5,6 +5,7 @@ class Bird{
         this.bird.x = 30;
         this.bird.y = 150;
         this.v = 3;
+        this.dx = 50;
         this.audioWing = new Audio("audio/audio_wing.mp3")
         this.draw(); 
     }
@@ -19,7 +20,7 @@ class Bird{
     flap(){
         document.addEventListener("click", () => {
             this.audioWing.play();
-            this.bird.y += - 50;
+            this.bird.y += - this.dx;
         });
     }
     collision(){
@@ -34,3 +35,5 @@ class Bird{
         })
     }
 }
+
+
